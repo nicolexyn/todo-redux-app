@@ -26,7 +26,6 @@ export class TodoItemComponent implements OnInit {
     this.txtInput = new FormControl(this.todo.texto, Validators.required);
 
     this.chkCompletado.valueChanges.subscribe(valor => {
-      console.log(valor);
       this.store.dispatch(actions.toggle({ id: this.todo.id }));
     });
   }

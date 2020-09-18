@@ -3,15 +3,15 @@ import { crear, toggle, editar, borrar, toggleAll, borrarCompletados } from './t
 import { Todo } from './models/todo.model';
 
 export const estadoInicial: Todo[] = [
-  new Todo('lalala'),
-  new Todo('lalala2'),
-  new Todo('lalala3'),
-  new Todo('lalala4')
+  new Todo('Tarea 1'),
+  new Todo('Tarea 2'),
+  new Todo('Tarea 3'),
+  new Todo('Tarea 4')
 ];
 
 const _todoReducer = createReducer(
   estadoInicial,
-  on(crear, (state, { texto }) => [...state, new Todo(texto)]),
+  on(crear, (state, { texto }) =>  [...state, new Todo( texto )  ]),
 
   on(toggle, (state, { id }) => {
     return state.map(todo => {
